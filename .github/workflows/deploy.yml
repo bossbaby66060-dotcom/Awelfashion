@@ -1,0 +1,9 @@
+- name: Install and Build
+  run: |
+    npm install
+    npm run build
+    
+- name: Upload Artifact
+  uses: actions/upload-pages-artifact@v3
+  with:
+    path: 'dist' # This tells GitHub to publish the "dist" folder!
